@@ -7,7 +7,8 @@ import numpy as np
 from prettytable import PrettyTable
 from prettytable import from_csv
 
-# This script was design to scrape all european football table results and add them to a csv file. I am current learning more about pandas to apply this data to a postgresql database using django model.
+# This script was design to scrape all european football table results and add them to a csv file. 
+# I am current learning more about pandas to apply this data to a postgresql database using django model.
 # Created by Ray Fuller
 
 
