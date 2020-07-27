@@ -2,7 +2,8 @@ import requests
 from bs4 import BeautifulSoup
 import pandas as pd
 
-# This script is design to scrape data from the government weather forecast website, then display the results in a csv file.
+# This script is design to scrape data from the government weather
+# forecast website, then display the results in a csv file.
 # created by Ray Fuller
 
 
@@ -29,3 +30,4 @@ weather_stuff = pd.DataFrame(
 print(weather_stuff)
 
 weather_stuff.to_csv('weather.csv')
+

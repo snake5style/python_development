@@ -2,8 +2,9 @@ import argparse
 import boto3
 from datetime import date, timedelta
 
-# This script was designed to create, copy and delete snapshots in an AWS environment with the capabilities of setting arguments
-# created by Ray Fuller and Felix
+# This script was designed to create, copy and delete snapshots in
+# an AWS environment with the capabilities of setting arguments
+# created by Ray Fuller
 
 
 """
