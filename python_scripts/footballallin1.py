@@ -1,6 +1,4 @@
-import csv
-import re
-import requests
+import requests, re, csv
 from bs4 import BeautifulSoup
 import pandas as pd
 import numpy as np
@@ -13,6 +11,7 @@ from prettytable import from_csv
 
 
 def futbol_index():
+   # Website pages to be scraped
     page = [
           'https://www.skysports.com/premier-league-table',
           'https://www.skysports.com/la-liga-table',
@@ -21,9 +20,10 @@ def futbol_index():
           'https://www.skysports.com/ligue-1-table'
     ]
 
-
+    # A list of league abbreviations for naming csv files
     league = [ "EPL", "LIGA", "BUND", "SERIE", "LIGUE", ]
 
+    # Zip for loop get, scrape and parse data into a csv file
     for pag, leag in zip(page, league):
        response = requests.get(pag)
        soup = BeautifulSoup(response.content, 'html.parser')
@@ -46,5 +46,9 @@ def futbol_index():
           last_df.to_csv('{0}.csv'.format(leag), index = False, sep=',', encoding='utf-8')
 
 
-futbol_index()
+def main():
+   futbol_index()
 
+
+if __name__ == '__main__':
+   main()

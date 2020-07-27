@@ -1,5 +1,4 @@
-import subprocess
-import boto3
+import boto3, subprocess
 from awspolicy import BucketPolicy
 
 # This script is designed to nslookup a domain, then apply those ip address to a s3 bucket policy
@@ -20,7 +19,7 @@ ip_arr.pop(0)
 
 #seting up connection to s3 bucket
 s3_client = boto3.client('s3')
-bucket_name = 'ods-ongage'
+bucket_name = 'bucket-name'
 
 # Load the bucket policy as an object
 bucket_policy = BucketPolicy(serviceModule=s3_client, resourceIdentifer=bucket_name)

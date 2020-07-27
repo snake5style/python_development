@@ -8,7 +8,7 @@ import sys
 # Created by Ray Fuller
 # This script will Deregister AMIs first
 # Then, delete the snapshots associated with the old AMIs
-# Next, create new AMIs and snapshots associated with the new AMIs 
+# Next, create new AMIs and snapshots associated with the new AMIs
 # Last, tag the new snapshots to be ready for deletion
 
 # Variables
